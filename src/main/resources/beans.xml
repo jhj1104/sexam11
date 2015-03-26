@@ -11,7 +11,12 @@
 
 <bean class="webapp.beans.Calculator" factory-method="getInstance"/>
 
-
-
-
+<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	<property name="basenames">
+		<list>
+			<value>classpath:/message</value>
+		</list>	
+	</property>
+	<property name="cacheSeconds" value="0"/>
+</bean>
 </beans>
